@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metalama.Bits", "Metalama.Bits\Metalama.Bits.csproj", "{03F11FB6-FD32-4A55-9DC1-133D058D44A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Runner\Runner.csproj", "{F437D14E-6BAA-4BC4-A17B-3C347E6B94C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{14359518-C843-4866-8188-8D3A3D9DB935}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03F11FB6-FD32-4A55-9DC1-133D058D44A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F11FB6-FD32-4A55-9DC1-133D058D44A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F11FB6-FD32-4A55-9DC1-133D058D44A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F11FB6-FD32-4A55-9DC1-133D058D44A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F437D14E-6BAA-4BC4-A17B-3C347E6B94C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F437D14E-6BAA-4BC4-A17B-3C347E6B94C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F437D14E-6BAA-4BC4-A17B-3C347E6B94C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F437D14E-6BAA-4BC4-A17B-3C347E6B94C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14359518-C843-4866-8188-8D3A3D9DB935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14359518-C843-4866-8188-8D3A3D9DB935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14359518-C843-4866-8188-8D3A3D9DB935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14359518-C843-4866-8188-8D3A3D9DB935}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50AE4AB9-FE6B-40A0-BD9D-84F5D04447B9}
+	EndGlobalSection
+EndGlobal
