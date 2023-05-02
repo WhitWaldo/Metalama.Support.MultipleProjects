@@ -1,10 +1,17 @@
-﻿using Models.Attributes;
+﻿using Metalama.Bits;
+using Microsoft.Extensions.Logging;
 
 namespace Models;
 
 public sealed class Repository<T> where T : IIdentifiable
 {
     public List<T> _entities = new();
+    private readonly ILogger _logger;
+
+    public Repository(ILogger<Repository<T>> logger)
+    {
+        _logger = logger;
+    }
 
     public void Add(T data)
     {

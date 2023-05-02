@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Metalama.Bits;
+using Microsoft.Extensions.Logging;
 using Models;
 
 namespace Runner
@@ -14,7 +15,7 @@ namespace Runner
             _logger = logger;
         }
 
-        public void DoStuff()
+        public void DoStuff([SensitiveData]string name)
         {
             _repository.Add(new Person("Nick"));
             _repository.Add(new Person("Bill"));

@@ -10,7 +10,7 @@ namespace Runner
             var compositionRoot = CompositionRoot.Build();
             var worker = compositionRoot.Resolve<Worker>();
 
-            worker.DoStuff();
+            worker.DoStuff("test value");
         }
     }
 }

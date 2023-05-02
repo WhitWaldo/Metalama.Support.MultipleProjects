@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Metalama.Bits\Metalama.Bits.csproj" />
+  </ItemGroup>
+
 </Project>
