@@ -9,6 +9,7 @@ public class Person : IIdentifiable
 {
     public Person(string name)
     {
+        Id = Guid.NewGuid();
         Name = name;
     }
 
