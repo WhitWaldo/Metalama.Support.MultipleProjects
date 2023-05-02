@@ -1,4 +1,4 @@
-﻿using Metalama.Bits;
+﻿//using Metalama.Bits;
 using Microsoft.Extensions.Logging;
 
 namespace Models;
@@ -24,7 +24,9 @@ public sealed class Repository<T> where T : IIdentifiable
         _entities = remaining;
     }
 
-    public void Update(Guid id, [SensitiveData]T data)
+    //Uncomment line 28 and comment out line 29, add the reference to `Metalama.Bits`, and uncomment the using statement and the logging will work for this class. Leave as-is and only `Runner` will show logging.
+    //public void Update(Guid id, [SensitiveData]T data)
+    public void Update(Guid id, T data)
     {
         for (var a = 0; a < _entities.Count; a++)
         {
