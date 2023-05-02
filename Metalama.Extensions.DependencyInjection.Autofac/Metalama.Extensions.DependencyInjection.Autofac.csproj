@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<PackageDescription>A Metalama framework adapter that locates and pulls dependencies from an Autofac container provider.</PackageDescription>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Metalama.Extensions.DependencyInjection" Version="2023.0.113-rc" />
+		<PackageReference Include="Autofac" Version="7.0.1" />
+	</ItemGroup>
+
+</Project>
