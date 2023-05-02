@@ -61,9 +61,8 @@ public class LogAttribute : MethodAspect
         var logger = (ILogger) loggerFieldOrProperty.Value!;
 
         var entryMessage = BuildInterpolatedString(false);
-        entryMessage.AddText($"{meta.Target.Type.ToDisplayString(CodeDisplayFormat.MinimallyQualified)}.{meta.Target.Method.Name} started.");
+        entryMessage.AddText(" started.");
         logger.LogInformation((string)entryMessage.ToValue());
-        //_telemetryClient.TrackTrace(entryMessage.ToValue(), SeverityLevel.Information);//, BuildDictionaryOfProperties());
         var stopwatch = new Stopwatch();
         stopwatch.Start();
 
@@ -92,8 +91,7 @@ public class LogAttribute : MethodAspect
             {
                 logger.LogTrace((string)successMessage.ToValue());
             }
-
-            //_telemetryClient.TrackTrace((string)successMessage.ToValue());
+            
             return result;
         }
         catch (Exception ex)
@@ -109,8 +107,7 @@ public class LogAttribute : MethodAspect
             {
                 logger.LogError(ex, (string)failureMessage.ToValue());
             }
-
-            //_telemetryClient.TrackTrace(failureMessage.ToValue());
+            
             throw;
         }
         finally
@@ -119,11 +116,12 @@ public class LogAttribute : MethodAspect
             using var guard = LoggingRecursionGuard.Begin();
             if (guard.CanLog)
             {
-                logger.LogTrace(
-                    (string)
-                    $"{meta.Target.Type.ToDisplayString(CodeDisplayFormat.MinimallyQualified)}.{meta.Target.Method.Name} elapsed (ms): {stopwatch.ElapsedMilliseconds}");
+                var elapsedMessage = BuildInterpolatedString(false);
+                elapsedMessage.AddText(" elapsed: ");
+                elapsedMessage.AddExpression(stopwatch.ElapsedMilliseconds);
+                elapsedMessage.AddText("ms");
+                logger.LogTrace((string)elapsedMessage.ToValue());
             }
-            //_telemetryClient.TrackMetric($"", stopwatch.ElapsedMilliseconds);
         }
     }
     
