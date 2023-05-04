@@ -1,0 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Metalama.Extensions.DependencyInjection.Autofac.Tests.Aspect;
+
+internal class EarlyRequired
+{
+}

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Runner", "Runner\Runner.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{14359518-C843-4866-8188-8D3A3D9DB935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metalama.Extensions.DependencyInjection.Autofac", "Metalama.Extensions.DependencyInjection.Autofac\Metalama.Extensions.DependencyInjection.Autofac.csproj", "{A8C31221-359C-4AF2-A8E6-4725C23D9F79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metalama.Extensions.DependencyInjection.Autofac", "Metalama.Extensions.DependencyInjection.Autofac\Metalama.Extensions.DependencyInjection.Autofac.csproj", "{A8C31221-359C-4AF2-A8E6-4725C23D9F79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metalama.Extensions.DependencyInjection.Autofac.Tests", "Metalama.Extensions.DependencyInjection.Autofac.Tests\Metalama.Extensions.DependencyInjection.Autofac.Tests.csproj", "{A8C24385-E1D3-4C99-A7F2-057E31A2CEB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A8C31221-359C-4AF2-A8E6-4725C23D9F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8C31221-359C-4AF2-A8E6-4725C23D9F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8C31221-359C-4AF2-A8E6-4725C23D9F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C24385-E1D3-4C99-A7F2-057E31A2CEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C24385-E1D3-4C99-A7F2-057E31A2CEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C24385-E1D3-4C99-A7F2-057E31A2CEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C24385-E1D3-4C99-A7F2-057E31A2CEB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
