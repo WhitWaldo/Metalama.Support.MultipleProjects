@@ -4,7 +4,7 @@ using Metalama.Framework.Code;
 using Metalama.Framework.Code.SyntaxBuilders;
 using Microsoft.Extensions.Logging;
 
-namespace Metalama.Bits.Repository;
+namespace Metalama.Bits;
 
 /// <summary>
 /// Turns the type decorated with this aspect into a simple repository.
@@ -32,14 +32,14 @@ public class RepositoryAspect : TypeAspect
                 //fieldBuilder.Writeability = Writeability.ConstructorOnly;
             });
         var loggerType =
-            ((INamedType) TypeFactory.GetType(typeof(ILogger<>))).WithTypeArguments(
+            ((INamedType)TypeFactory.GetType(typeof(ILogger<>))).WithTypeArguments(
                 builder.Target.TypeDefinition.ToType());
         builder.Advice.IntroduceParameter(builder.Target.Constructors.First(), "logger", typeof(ILogger),
             TypedConstant.Default(loggerType));
-        
+
         var eb = new ExpressionBuilder();
         eb.AppendVerbatim("_logger = logger");
-        builder.Advice.AddInitializer(builder.Target.Constructors.First(), StatementFactory.FromExpression(eb.ToExpression()) );
+        builder.Advice.AddInitializer(builder.Target.Constructors.First(), StatementFactory.FromExpression(eb.ToExpression()));
 
         builder.Advice.IntroduceMethod(
             builder.Target,
@@ -50,7 +50,7 @@ public class RepositoryAspect : TypeAspect
             {
                 methodBuilder.Accessibility = Accessibility.Public;
             },
-            new {T = genericType, entitiesField = entities.Declaration});
+            new { T = genericType, entitiesField = entities.Declaration });
 
         builder.Advice.IntroduceMethod(
             builder.Target,

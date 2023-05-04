@@ -1,5 +1,5 @@
 ﻿using Interfaces;
-using Metalama.Bits.Repository;
+using Metalama.Bits;
 
 namespace Models;
 

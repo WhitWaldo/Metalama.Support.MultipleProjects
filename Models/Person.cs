@@ -2,11 +2,6 @@
 
 namespace Models;
 
-//public record Person(string Name) : IHasId
-//{
-//    public Guid Id { get; init; } = Guid.NewGuid();
-//}
-
 public class Person : IHasId
 {
     public Person(string name)
