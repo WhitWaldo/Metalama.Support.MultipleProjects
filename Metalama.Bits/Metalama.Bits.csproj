@@ -13,6 +13,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
 	  <ProjectReference Include="..\Metalama.Extensions.DependencyInjection.Autofac\Metalama.Extensions.DependencyInjection.Autofac.csproj" />
 	</ItemGroup>
 </Project>
