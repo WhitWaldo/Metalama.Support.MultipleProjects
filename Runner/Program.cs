@@ -1,9 +1,12 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Metalama.Bits;
+using Metalama.Framework.Aspects;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Models;
 
+[assembly:AspectOrder(typeof(InjectedLoggerAttribute), typeof(RepositoryAspect))]
 namespace Runner
 {
     internal class Program
