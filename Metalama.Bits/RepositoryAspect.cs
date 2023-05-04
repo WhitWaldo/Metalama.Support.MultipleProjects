@@ -26,20 +26,20 @@ public class RepositoryAspect : TypeAspect
             });
 
         //Add the ILogger field
-        var logger = builder.Advice.IntroduceField(builder.Target,
-            "_logger", typeof(ILogger), buildField: fieldBuilder =>
-            {
-                //fieldBuilder.Writeability = Writeability.ConstructorOnly;
-            });
-        var loggerType =
-            ((INamedType)TypeFactory.GetType(typeof(ILogger<>))).WithTypeArguments(
-                builder.Target.TypeDefinition.ToType());
-        builder.Advice.IntroduceParameter(builder.Target.Constructors.First(), "logger", typeof(ILogger),
-            TypedConstant.Default(loggerType));
+        //var logger = builder.Advice.IntroduceField(builder.Target,
+        //    "_logger", typeof(ILogger), buildField: fieldBuilder =>
+        //    {
+        //        //fieldBuilder.Writeability = Writeability.ConstructorOnly;
+        //    });
+        //var loggerType =
+        //    ((INamedType)TypeFactory.GetType(typeof(ILogger<>))).WithTypeArguments(
+        //        builder.Target.TypeDefinition.ToType());
+        //builder.Advice.IntroduceParameter(builder.Target.Constructors.First(), "logger", typeof(ILogger),
+        //    TypedConstant.Default(loggerType));
 
-        var eb = new ExpressionBuilder();
-        eb.AppendVerbatim("_logger = logger");
-        builder.Advice.AddInitializer(builder.Target.Constructors.First(), StatementFactory.FromExpression(eb.ToExpression()));
+        //var eb = new ExpressionBuilder();
+        //eb.AppendVerbatim("_logger = logger");
+        //builder.Advice.AddInitializer(builder.Target.Constructors.First(), StatementFactory.FromExpression(eb.ToExpression()));
 
         builder.Advice.IntroduceMethod(
             builder.Target,
@@ -96,8 +96,8 @@ public class RepositoryAspect : TypeAspect
             },
             args: new { T = genericType, entitiesField = entities.Declaration });
 
-        //builder.Outbound.SelectMany(type => type.Methods)
-        //    .AddAspectIfEligible<LogAttribute>();
+        builder.Outbound.SelectMany(type => type.Methods)
+            .AddAspectIfEligible<InjectedLoggerAttribute>();
     }
 
     /// <summary>
