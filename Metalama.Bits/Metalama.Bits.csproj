@@ -8,6 +8,11 @@
 
 	<ItemGroup>
 		<PackageReference Include="Metalama.Framework" Version="2023.0.113-rc" />
+		<PackageReference Include="Metalama.Extensions.DependencyInjection" Version="2023.0.113-rc" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Metalama.Extensions.DependencyInjection.Autofac\Metalama.Extensions.DependencyInjection.Autofac.csproj" />
 	</ItemGroup>
 </Project>

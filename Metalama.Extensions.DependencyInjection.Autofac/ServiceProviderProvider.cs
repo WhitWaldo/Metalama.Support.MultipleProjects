@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
+﻿using Autofac;
 
 namespace Metalama.Extensions.DependencyInjection.Autofac;
 
 public static class ServiceProviderProvider
 {
-    public static Func<IServiceProvider> ServiceProvider { get; set; } =
-        //() => new AutofacServiceProviderFactory()
-        () => new AutofacServiceProviderFactory().CreateBuilder();
+    public static Func<IServiceProvider> ServiceProvider { get; set; } = () =>
+    {
+        var builder = new ContainerBuilder();
+        var container = builder.Build();
+
+        using var scope = container.BeginLifetimeScope();
+        return new AutofacServiceProvider(scope);
+    };
 }

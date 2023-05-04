@@ -2,6 +2,7 @@
 using System.Reflection;
 using Autofac;
 using Autofac.Builder;
+using Metalama.Extensions.DependencyInjection.Autofac;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Metalama.Extensions.DependencyInjection.Autofac;
@@ -14,7 +15,7 @@ public static class AutofacRegistration
     /// </summary>
     public static void Populate(this ContainerBuilder builder, IEnumerable<ServiceDescriptor> descriptors)
     {
-        Populate(builder, descriptors, null);
+        builder.Populate(descriptors, null);
     }
 
     /// <summary>

@@ -8,8 +8,8 @@ namespace Metalama.Extensions.DependencyInjection.Autofac;
 /// <summary>
 /// Autofac implementation of the ASP.NET Core <see cref="IServiceProvider"/>.
 /// </summary>
-/// <seealso cref="System.IServiceProvider" />
-/// <seealso cref="Microsoft.Extensions.DependencyInjection.ISupportRequiredService" />
+/// <seealso cref="IServiceProvider" />
+/// <seealso cref="ISupportRequiredService" />
 public partial class AutofacServiceProvider : IServiceProvider, ISupportRequiredService, IServiceProviderIsService, IDisposable, IAsyncDisposable
 {
     private readonly ILifetimeScope _lifetimeScope;

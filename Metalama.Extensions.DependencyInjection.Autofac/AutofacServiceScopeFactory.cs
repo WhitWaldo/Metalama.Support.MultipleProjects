@@ -22,7 +22,7 @@ internal class AutofacServiceScopeFactory : IServiceScopeFactory
 
     /// <summary>
     /// Creates an <see cref="IServiceScope" /> which contains an
-    /// <see cref="System.IServiceProvider" /> used to resolve dependencies within
+    /// <see cref="IServiceProvider" /> used to resolve dependencies within
     /// the scope.
     /// </summary>
     /// <returns>

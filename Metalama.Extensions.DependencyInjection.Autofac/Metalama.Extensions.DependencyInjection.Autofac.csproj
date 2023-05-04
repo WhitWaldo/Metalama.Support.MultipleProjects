@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -10,7 +10,7 @@
     <PackageReference Include="Autofac" Version="7.0.1" />
     <PackageReference Include="Metalama.Extensions.DependencyInjection" Version="2023.0.113-rc" />
     <PackageReference Include="Metalama.Framework" Version="2023.0.113-rc" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0"/>
   </ItemGroup>
 
 </Project>

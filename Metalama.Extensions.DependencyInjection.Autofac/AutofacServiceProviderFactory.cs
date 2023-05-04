@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Builder;
+using Metalama.Extensions.DependencyInjection.Autofac;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Metalama.Extensions.DependencyInjection.Autofac;
