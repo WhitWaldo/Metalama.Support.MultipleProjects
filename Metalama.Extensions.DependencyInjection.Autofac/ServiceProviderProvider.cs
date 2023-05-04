@@ -1,15 +1,20 @@
-﻿using Autofac;
+﻿using System;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 
-namespace Metalama.Extensions.DependencyInjection.Autofac;
-
-public static class ServiceProviderProvider
+namespace Metalama.Extensions.DependencyInjection.Autofac
 {
-    public static Func<IServiceProvider> ServiceProvider { get; set; } = () =>
+    public static class ServiceProviderProvider
     {
-        var builder = new ContainerBuilder();
-        var container = builder.Build();
+        public static Func<IServiceProvider> ServiceProvider { get; set; } = () =>
+        {
+            var builder = new ContainerBuilder();
+            var container = builder.Build();
 
-        using var scope = container.BeginLifetimeScope();
-        return new AutofacServiceProvider(scope);
-    };
+            using (var scope = container.BeginLifetimeScope())
+            {
+                return new AutofacServiceProvider(scope);
+            }
+        };
+    }
 }

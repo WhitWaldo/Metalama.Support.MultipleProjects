@@ -1,10 +1,12 @@
 ﻿using Metalama.Extensions.DependencyInjection.Implementation;
 using Metalama.Framework.Aspects;
 
-namespace Metalama.Extensions.DependencyInjection.Autofac;
-
-[CompileTime]
-public class AutofacDependencyInjectionFramework : DefaultDependencyInjectionFramework
+namespace Metalama.Extensions.DependencyInjection.Autofac
 {
-    protected override DefaultDependencyInjectionStrategy GetStrategy(DependencyContext context) => new EarlyDependencyInjectionStrategy(context);
+    [CompileTime]
+    public class AutofacDependencyInjectionFramework : DefaultDependencyInjectionFramework
+    {
+        protected override DefaultDependencyInjectionStrategy GetStrategy(DependencyContext context) =>
+            new EarlyDependencyInjectionStrategy(context);
+    }
 }
