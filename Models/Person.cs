@@ -1,11 +1,13 @@
-﻿namespace Models;
+﻿using Interfaces;
+
+namespace Models;
 
 //public record Person(string Name) : IIdentifiable
 //{
 //    public Guid Id { get; init; } = Guid.NewGuid();
 //}
 
-public class Person : IIdentifiable
+public class Person : IHasId
 {
     public Person(string name)
     {

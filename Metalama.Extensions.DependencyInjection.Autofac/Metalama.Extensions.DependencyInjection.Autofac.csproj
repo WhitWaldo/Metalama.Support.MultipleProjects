@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageReference Include="Metalama.Extensions.DependencyInjection" Version="2023.0.113-rc" />
+    <PackageReference Include="Metalama.Extensions.DependencyInjection" Version="2023.0.115" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 
