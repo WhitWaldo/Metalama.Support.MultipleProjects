@@ -1,8 +1,9 @@
-﻿using Metalama.Bits.Repository;
+﻿using Interfaces;
+using Metalama.Bits.Repository;
 
 namespace Models;
 
 [RepositoryAspect]
-public class Repository<T>
+public class Repository<T> where T : IHasId
 {
 }

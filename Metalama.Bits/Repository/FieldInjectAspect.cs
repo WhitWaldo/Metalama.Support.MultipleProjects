@@ -100,6 +100,12 @@ public class RepositoryAspect : TypeAspect
         //    .AddAspectIfEligible<LogAttribute>();
     }
 
+    /// <summary>
+    /// Adds a thing.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="data"></param>
+    /// <param name="entitiesField"></param>
     [Template]
     private void Add<[CompileTime] T>(T data, IField entitiesField) where T : IHasId
     {
