@@ -96,8 +96,8 @@ public class RepositoryAspect : TypeAspect
             },
             args: new { T = genericType, entitiesField = entities.Declaration });
 
-        //builder.Outbound.SelectMany(type => type.Methods)
-        //    .AddAspectIfEligible<InjectedLoggerAttribute>();
+        builder.Outbound.SelectMany(type => type.Methods)
+            .AddAspectIfEligible<InjectedLoggerAttribute>();
     }
 
     /// <summary>
