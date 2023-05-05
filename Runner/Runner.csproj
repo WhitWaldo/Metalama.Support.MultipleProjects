@@ -16,7 +16,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Metalama.Bits\Metalama.Bits.csproj" />
-		<ProjectReference Include="..\Metalama.Extensions.DependencyInjection.Autofac\Metalama.Extensions.DependencyInjection.Autofac.csproj" />
 		<ProjectReference Include="..\Models\Models.csproj" />
 	</ItemGroup>
 
